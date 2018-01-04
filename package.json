@@ -5,6 +5,7 @@
     "precommit": "lint-staged",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "start": "npm run storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -19,20 +20,29 @@
   },
   "repository": "git@github.com:banana-family/components.git",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "react-native-web": "0.2",
+    "styled-components": "^2.4.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^5.2.5",
     "@commitlint/config-conventional": "^5.2.3",
     "@storybook/addon-actions": "^3.3.3",
     "@storybook/addon-links": "^3.3.3",
     "@storybook/react": "^3.3.3",
+    "@storybook/react-native": "^3.3.3",
+    "babel-plugin-react-native-web": "^0.3.0-rc.4",
+    "babel-preset-react-native": "^4.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
     "prettier-standard": "^7.0.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-native": "^0.51.0",
     "semantic-release": "^11.0.2",
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0"
   },
   "peerDependencies": {
     "react": "^16.2.0",

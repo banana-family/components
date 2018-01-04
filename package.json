@@ -1,0 +1,28 @@
+{
+  "name": "@banana-family/components",
+  "version": "0.0.0-development",
+  "scripts": {
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
+  },
+  "lint-staged": {
+    "linters": {
+      "**/*.js": [
+        "prettier-standard",
+        "standard --fix",
+        "git add"
+      ]
+    }
+  },
+  "repository": "git@github.com:banana-family/components.git",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/config-conventional": "^5.2.3",
+    "@commitlint/cli": "^5.2.5",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "prettier-standard": "^7.0.3",
+    "standard": "^10.0.3"
+  }
+}
